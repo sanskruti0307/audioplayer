@@ -18,6 +18,7 @@
         <button v-for="song in songs" :key="song.src" @click="play(song)" :class="(song.src == current.src) ? 'song playing' : 'song'">
           {{ song.title }} - {{ song.artist }}
         </button>
+        <h6 class="text-center">Made with <i class="fa fa-heart" style="font-size:20px;color:red; margin-top: 40px;"></i> by Sanskruti</h6>
       </section>
     </main>
 </template>
@@ -203,5 +204,10 @@ button:hover {
 .playlist .song.playing {
   color: #FFF;
   background-image: linear-gradient(to right, #CC2E5D, #FF5858);
+}
+h6 {
+  font-style: italic;
+  font-size: medium;
+  font-weight: bold;
 }
 </style>
